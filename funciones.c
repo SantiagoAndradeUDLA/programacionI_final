@@ -66,7 +66,7 @@ int ingresar_datos_actuales(Zona *zonas) {
                     fprintf(stderr, "Error al leer el nivel del contaminante %d para %s. Ingrese un valor valido (positivo).\n", j + 1, zonas[i].nombre);
                     while(getchar() != '\n');  // Limpiar buffer de entrada
                 } else {
-                    break;  // Salir del ciclo si el valor es válido
+                    break;
                 }
             }
         }
@@ -77,7 +77,7 @@ int ingresar_datos_actuales(Zona *zonas) {
                 fprintf(stderr, "Error al leer la temperatura para %s. Ingrese un valor valido.\n", zonas[i].nombre);
                 while(getchar() != '\n');  // Limpiar buffer de entrada
             } else {
-                break;  // Salir del ciclo si el valor es válido
+                break;
             }
         }
 
@@ -87,7 +87,7 @@ int ingresar_datos_actuales(Zona *zonas) {
                 fprintf(stderr, "Error al leer la velocidad del viento para %s. Ingrese un valor valido (positivo).\n", zonas[i].nombre);
                 while(getchar() != '\n');  // Limpiar buffer de entrada
             } else {
-                break;  // Salir del ciclo si el valor es válido
+                break;
             }
         }
 
@@ -97,14 +97,12 @@ int ingresar_datos_actuales(Zona *zonas) {
                 fprintf(stderr, "Error al leer la humedad para %s. Ingrese un valor valido (positivo).\n", zonas[i].nombre);
                 while(getchar() != '\n');  // Limpiar buffer de entrada
             } else {
-                break;  // Salir del ciclo si el valor es válido
+                break;
             }
         }
     }
     return 0;
 }
-
-
 
 void mostrar_predicciones(const Zona *zonas) {
     if (zonas == NULL) return;
